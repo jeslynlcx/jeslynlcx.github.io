@@ -71,42 +71,48 @@
         ul {
             list-style: none;
         }
+        .nav-link:active{
+            color: white;
+            
+        }
     </style>
 </head>
 <body>
-    <div class="top d-flex justify-content-center text-center">
+    <div class="top d-flex justify-content-center align-items-center text-center" >
         <div class="p-5">
+        <div style="color: white; text-shadow:3px 2px  black;">
         <h1 class="text-center">Welcome to China</h1>
-        <h5 class="text-center">This is a tourist attraction websites</h5>
+        <h5>This is a tourist attraction websites</h5>
+        </div>
     </div>
     </div>
     
     <ul class="navbar bg-warning justify-content-around p-2 fixed-top">
         <li class="nav-item">
-            <a href="#" class="nav-link text-white">Home</a>
+            <a href="#" class="nav-link ">Home</a>
         </li>
         <li class="nav-item">
-            <a href="#About China" class="nav-link text-dark">About China</a>
+            <a href="#About China" class="nav-link ">About China</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-blue" href="#Landscape" >Landscape</a>
+            <a  href="#Landscape" class="nav-link" >Landscape</a>
         </li>
         <li class="nav-item">
-            <a href="#Food Recommendation" class="nav-link text-red" >Food Recommendation</a>
+            <a href="#Food Recommendation" class="nav-link " >Food Recommendation</a>
         </li>
         <li class="nav-item">
-            <a href="#Login" class="nav-link" class="text-blue">Login</a>
+            <a href="#Login" class="nav-link" >Login</a>
         </li>
     </ul>
 
 <section class="container my-5" id="About China">
-    <h1 class="text-center mb-4">About China</h1>
-
+    <h1 class="text-center mb-4" style="padding-top: 50px;">About China</h1>
+    <hr>
     <div class="row align-items-center">
         
         <!-- 图片 -->
         <div class="col-md-7 text-center">
-            <img src="https://cdn.britannica.com/15/183615-050-6AB17F25/World-Data-Locator-Map-China.jpg" class="img-fluid w-70">
+            <img src="https://cdn.britannica.com/15/183615-050-6AB17F25/World-Data-Locator-Map-China.jpg" class="img-fluid w-70" style="padding-top: 30px;">
         </div>
 
         <!-- 文字 -->
@@ -119,13 +125,15 @@
 
     </div>
 </section>
-    <div class="container text-center">
+    
+    <section id="Landscape">
+
+        <div class="container text-center" style="padding-top: 50px;">
         <span class="tag">
             <h1>China Landscape</h1>
         </span>
-        <br>
-    <section id="Landscape">
-        <h3 class="text-center">Beijing</h3>
+
+        <h2 class="text-center" style="font-weight: bold;">BEI JING</h2>
     <div class="row">
         <div class="col-md-4">
             <div class="card">
@@ -164,7 +172,7 @@
      </div>
 
      
-    <h1 class="text-center">ChengDu</h1>
+    <h2 class="text-center" style="padding-top: 10px;font-weight: bold;">CHENG DU</h2>
     <hr>
     <br>
     <div class="row">
@@ -201,7 +209,7 @@
         </div>
       </div>
 
-      <h1>Shang Hai</h1>
+      <h2 style="padding-top: 10px; padding-bottom: 10px; font-weight: bold;">SHANG HAI</h2>
       <hr>
       <br>
       <div class="row">
@@ -209,7 +217,7 @@
         <div class="card">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/18-03-12_ShanghaiDisney_013.jpg/960px-18-03-12_ShanghaiDisney_013.jpg" alt="disney" class="top-mg-top">
             <div class="card-body">
-                <h5>Shanghai Disneyland</h5>
+                <h5>Shang Hai Disneyland</h5>
                 <p>Shanghai Disneyland (Chinese: 上海迪士尼乐园) is a theme park located in Chuansha New Town, Pudong, Shanghai, China, that is part of the Shanghai Disney Resort. </p>
                 <a href="https://en.wikipedia.org/wiki/Shanghai_Disneyland" class="btn btn-primary">Learn more</a>
             
@@ -221,7 +229,7 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Shanghai_Tower_2015.jpg" alt="" class="top-mg-top">
             <div class="card-body">
                 <h5>Shang Hai Tower</h5>
-                <p>The Shanghai Tower is a 128-story, 632-meter-tall (2,073-foot) megatall skyscraper located in Lujiazui, Pudong, Shanghai.</p>
+                <p>The ShangHai Tower is a 128-story, 632-meter-tall (2,073-foot) megatall skyscraper located in Lujiazui, Pudong, ShangHai.</p>
                 <br>
                 <a href="https://en.wikipedia.org/wiki/Shanghai_Tower" class="btn btn-primary">Learn more</a>
             </div>
@@ -243,10 +251,10 @@
 </div>
 
     <section id="Food Recommendation">
-    <h2 style="text-align: center; padding: 10px;">" Food Recommendation "</h2>
+    <h1 style="text-align: center; padding: 10px; padding-top: 50px;">Food Recommendation</h1>
 <div class="container mt-4">
     <div class="row g-4">
-        <h2 style="padding: 0; margin: 0; padding-top: 30px; padding-left: 30px; font-weight: bold;">BEI JING</h2>
+        <h2 style="padding: 0; margin: 0; padding-top: 30px; padding-left: 30px; font-weight: bold; ">BEI JING</h2>
         <!-- Card 1 -->
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card-border-food">
@@ -291,49 +299,8 @@
             </div>
         </div>
 
-        <h2 style="padding: 0; margin: 0; padding-top: 30px; padding-left: 30px; font-weight: bold;">SHANG HAI</h2>
-        <!-- Card 5 -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card-border-food">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTi26OvmzTrdkY4qSnqtxFvWpeFutww6htvA&s">
-                <div class="text">
-                    <h4 style="margin:0;">XIAO LONG BAO</h4>
-                    <p>Steamed soup dumplings filled with juicy pork and rich broth.</p>
-                </div>
-            </div>
-        </div>
-        <!-- Card 6 -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card-border-food">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNklIxRaJCWUBPbrplhKCt70-hJ1DkEWDrig&s">
-                <div class="text">
-                    <h4 style="margin:0;">SHENG JIAN BAO</h4>
-                    <p>Pan-fried buns with crispy bottoms and juicy meat filling.</p>
-                </div>
-            </div>
-        </div>
-        <!-- Card 7 -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card-border-food">
-                <img src="https://imgs.699pic.com/images/604/003/706.jpg!list1x.v2">
-                <div class="text">
-                    <h4 style="margin:0;">PAI GU NIAN GAO</h4>
-                    <p>Stir-fried rice cakes with tender pork ribs in savory sauce.</p>
-                </div>
-            </div>
-        </div>
-        <!-- Card 8 -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card-border-food">
-                <img src="https://i.ytimg.com/vi/gsImUdoIgHc/sddefault.jpg">
-                <div class="text">
-                    <h4 style="margin:0;">HONG SHAO ROU</h4>
-                    <p>Braised pork belly cooked in a sweet and savory soy sauce.</p>
-                </div>
-            </div>
-        </div>
         <h2 style="padding: 0; margin: 0; padding-top: 30px; padding-left: 30px; font-weight: bold;">CHENG DU</h2>
-        <!-- Card 9 -->
+        <!-- Card 5 -->
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card-border-food">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Aclh-1qksiNqhKlpj7efxqhwvWtVMFhmbA&s">
@@ -343,7 +310,7 @@
                 </div>
             </div>
         </div>
-        <!-- Card 10 -->
+        <!-- Card 6 -->
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card-border-food">
                 <img src="https://7braisa.com/cdn/shop/files/01_c340c4cb-f8e3-4800-b6e6-025baacb3078.jpg?v=1742578774">
@@ -353,7 +320,7 @@
                 </div>
             </div>
         </div>
-        <!-- Card 11 -->
+        <!-- Card 7 -->
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card-border-food">
                 <img src="https://hkgstv.oss-cn-beijing.aliyuncs.com/uploads/20250617/6672360d07d65b5f9b3f1a428a65b8a5.jpg">
@@ -363,7 +330,7 @@
                 </div>
             </div>
         </div>
-        <!-- Card 12 -->
+        <!-- Card 8 -->
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card-border-food">
                 <img src="https://i.ytimg.com/vi/JxvFANun7tc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAaotV2NCkD3J3Oxr-V6jL0GLiqkQ">
@@ -373,6 +340,49 @@
                 </div>
             </div>
         </div>
+
+        <h2 style="padding: 0; margin: 0; padding-top: 30px; padding-left: 30px; font-weight: bold;">SHANG HAI</h2>
+        <!-- Card 9 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card-border-food">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTi26OvmzTrdkY4qSnqtxFvWpeFutww6htvA&s">
+                <div class="text">
+                    <h4 style="margin:0;">XIAO LONG BAO</h4>
+                    <p>Steamed soup dumplings filled with juicy pork and rich broth.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 10 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card-border-food">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNklIxRaJCWUBPbrplhKCt70-hJ1DkEWDrig&s">
+                <div class="text">
+                    <h4 style="margin:0;">SHENG JIAN BAO</h4>
+                    <p>Pan-fried buns with crispy bottoms and juicy meat filling.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 11 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card-border-food">
+                <img src="https://imgs.699pic.com/images/604/003/706.jpg!list1x.v2">
+                <div class="text">
+                    <h4 style="margin:0;">PAI GU NIAN GAO</h4>
+                    <p>Stir-fried rice cakes with tender pork ribs in savory sauce.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 12 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card-border-food">
+                <img src="https://i.ytimg.com/vi/gsImUdoIgHc/sddefault.jpg">
+                <div class="text">
+                    <h4 style="margin:0;">HONG SHAO ROU</h4>
+                    <p>Braised pork belly cooked in a sweet and savory soy sauce.</p>
+                </div>
+            </div>
+        </div>
+        
 
     </div>
 </div>
