@@ -1,0 +1,38 @@
+.school-container{
+    position: relative;
+    display: inline-block;
+}
+.school-hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 250px;
+    opacity: 0;
+    transition: 0.4s ease;
+    border-radius: 40px;
+    overflow: hidden;
+}
+.school-hover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.school-container:hover .school-hover{
+    opacity: 1;
+}
+.education-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 20px;
+    padding-left: 165px;
+}
+.border{
+    width: 350px;
+    height: 250px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius:40px;
+    padding: 5px;
+}

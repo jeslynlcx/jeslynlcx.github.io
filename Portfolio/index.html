@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="sport.css">
+    <link rel="stylesheet" href="instrument.css">
+    <link rel="stylesheet" href="command.css">
+    <link rel="stylesheet" href="contactme.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="about.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=PT+Sans+Narrow:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rammetto+One&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <style>
+        .hero{
+            background-color: rgb(30, 38, 47);
+            /* background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100vh; */
+            width: 100%; 
+            position: sticky;
+            color: white;
+        }
+        .container{
+            max-width: 1200px;
+        }
+        .container1{
+            color: white;
+            text-align: center;
+        }
+        .row {
+            display: flex;
+            flex-direction: row; 
+            align-items: flex-start; 
+            gap: 40px;
+            width: 100%;
+        }
+        .container2 {
+            flex: 1; 
+            /* padding-top: 50px;  */
+            /* margin: 250px; */
+            padding: 230px;
+            padding-left: 0;
+            margin-left: 0;
+            
+        }
+        .container2 h3{
+            display: flex;
+            flex-direction: row;
+            font-weight: bold;
+        }
+        .card1{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .card2{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .game-box{
+            width: 350px;
+            height: 250px;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius:40px 0 0 ;
+            padding: 30px;
+            text-align: center;
+            align-content: center;
+        }
+        .game-container {
+            position: relative;
+        }
+        .big-border {
+            position: absolute;
+            top: 0;
+            left: 350px;
+            width: 500px;
+            height: 100%;
+            opacity: 0;
+            transform: scaleY(0);
+            transform-origin: left;
+            transition: 0.4s ease;
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.9);
+            border-radius: 0 40px 40px 0;
+        }
+        .big-border img {
+            width: 80px;
+            height: auto;
+            margin: 5px;
+        }
+        .game-box:hover .big-border {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+        .interest-container{
+            display: flex; 
+            padding: 0;
+            /* padding-top: 30px; */
+            justify-content: flex-start;
+        }
+        .page{
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+        .pt-sans-narrow-regular {
+            font-family: "PT Sans Narrow", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 20px;
+        }
+        .pt-sans-narrow-bold {
+            font-family: "PT Sans Narrow", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 40px;
+        }
+        .bebas-neue-regular {
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .floating-button{
+            background-color: rgb(41, 141, 181);
+            border: 2px solid white;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 60px;
+            right: 80px;
+            border: none;
+            z-index: 9999;
+            text-align: center;
+            align-content: center;
+        }
+        .footer{
+            background-color: rgb(17, 61, 78);
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            align-content: center;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="hero">
+
+<!-- First page -->
+    <div class="container">
+    <div class="row">
+    <div class="sidebar">
+    <h1>Explore</h1>
+    <hr>
+    <ul>
+        <li><a href="#Home" class="nav-box bg-secondary" style="border-radius: 10px; box-shadow: 3px 2px 5px; font-weight: bold;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+            </svg>
+            Home</a></li>
+        <li><a href="#Student Life" class="nav-box bg-secondary" style="border-radius: 10px; box-shadow: 3px 2px 5px; font-weight: bold;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+            </svg>
+            About</a></li>
+        
+        <li>
+            <a href="#interestMenu" class="nav-box bg-secondary" style="border-radius: 10px; box-shadow: 3px 2px 5px; font-weight: bold;" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="interestMenu">
+                Interest ▼
+            </a>
+        
+        </li>
+
+        <div class="collapse" id="interestMenu">
+            <li><a href="#Games" class="sub-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-controller" viewBox="0 0 16 16">
+                <path d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1z"/>
+                <path d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729q.211.136.373.297c.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466s.34 1.78.364 2.606c.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527s-2.496.723-3.224 1.527c-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.3 2.3 0 0 1 .433-.335l-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a14 14 0 0 0-.748 2.295 12.4 12.4 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.4 12.4 0 0 0-.339-2.406 14 14 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27s-2.063.091-2.913.27"/>
+                </svg>
+                Games</a></li>
+            <li><a href="#Sports" class="sub-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trophy" viewBox="0 0 16 16">
+                <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935M3.504 1q.01.775.056 1.469c.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.5.5 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667q.045-.694.056-1.469z"/>
+                </svg>
+                Sports</a></li>
+            <li><a href="#Instruments" class="sub-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13s1.12-2 2.5-2 2.5.896 2.5 2m9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2"/>
+                <path fill-rule="evenodd" d="M14 11V2h1v9zM6 3v10H5V3z"/>
+                <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4z"/>
+                </svg>
+                Instruments</a></li>
+        </div>
+
+        <li><a href="#Contact" class="nav-box bg-secondary" style="border-radius: 10px; box-shadow: 3px 2px 5px; font-weight: bold;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-rolodex" viewBox="0 0 16 16">
+            <path d="M8 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+            <path d="M1 1a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h.5a.5.5 0 0 0 .5-.5.5.5 0 0 1 1 0 .5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5.5.5 0 0 1 1 0 .5.5 0 0 0 .5.5h.5a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H6.707L6 1.293A1 1 0 0 0 5.293 1zm0 1h4.293L6 2.707A1 1 0 0 0 6.707 3H15v10h-.085a1.5 1.5 0 0 0-2.4-.63C11.885 11.223 10.554 10 8 10c-2.555 0-3.886 1.224-4.514 2.37a1.5 1.5 0 0 0-2.4.63H1z"/>
+            </svg>
+            Contact</a></li>
+    </ul>
+    </div>
+        
+    <div class="container2 pt-sans-narrow-regular" id="Home">
+        <h1 style="font-size: 50px;">Hello, I'm</h1>
+        <h1 style="font-size: 70px; font-weight: bold;">JESLYN LEE CHEN XI</h1> 
+        <p style="font-size: 20px; line-height: 0;">Let's know more about me!</p>
+        <p style="font-size: 20px;">I'm an ISFP, I'm a quiet observer who thrives in deep conversations and team activities with close friends. Though I’m a self-proclaimed 'topic stopper,' I find my true release through gaming, sports, music, and collecting—where I can relax and focus on every detail I love.</p>
+    </div>
+<!--First Page -->
+<!-- Second Page -->
+
+    <div class="bebas-neue-regular" id="Student Life">
+        <div class="education-row " style="padding-top: 50px;">
+        
+            <div class="Card1">
+                <div class="card1">
+                <div class="school-container"> 
+                <div class="border">
+                <h2>?-2014</h2>
+                <h3>Melody Kindyland</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqs82vEoGnf5TXnmMEuVll6TCwXhO2LFexMg&s" alt="" width="150" height="150" style="padding-bottom: 5px;">
+                </div>
+                <div class="school-hover">
+                    <img src="./Assets/School/melodylastday.jpg" alt="Melody">
+                </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="Card2">
+                <div class="card1">
+                <div class="school-container"> 
+                <div class="border">
+                <h2>2015-2020</h2>
+                <h3>SJKC SHANG WU</h3>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYszHWmaGIaBPxTJYxNH96X7wE4CDKHUVVmA&s" alt="ShangWu Logo" width="150" height="150" style="padding-bottom: 5px;">
+                </div>
+                <div class="school-hover">
+                    <img src="./Assets/School/shangwu lstday.jpg" alt="Shang Wu">
+                </div>
+                </div> 
+                </div>
+            </div>
+        </div>
+        
+        <h1 style="margin: 0; padding: 0; padding-left: 530px; font-size: 4rem; ">Student Life</h1>
+        
+        <div class="education-row">
+            <div class="Card3">
+                <div class="card1">
+                <div class="school-container"> 
+                <div class="border">
+                <h2>2021-2025</h2>
+                <h3>SMJK UNION</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/ms/5/5f/Lencana_Sekolah_Menengah_Jenis_Kebangsaan_Union.jpg" alt="" width="150" height="150">
+                </div>
+                <div class="school-hover"> 
+                    <img src="./Assets/School/union lastdau.jpg" alt="Union">
+                </div>
+                </div> 
+                </div>
+            </div>
+            
+            <div class="Card4">
+                <div class="card1">
+                <div class="school-container"> 
+                <div class="border">
+                <h2>2026-?</h2>
+                <h3>Forward College</h3>
+                <img src="https://files.elfsightcdn.com/eafe4a4d-3436-495d-b748-5bdce62d911d/8febc518-ca17-4429-bbc5-4b9301af5ce0/ForwardCollege_Square_BLUE-2x.png" alt="" width="150" height="150">
+                </div>
+                <div class="school-hover"> 
+                    <img src="./Assets/School/forward.JPG" alt="Forward College">
+                </div>
+                </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Second Page -->
+<!-- Third Page -->
+    
+    <div class="Interest ▼" style="margin: 0; padding: 0; padding-left: 245px;">
+        <!-- <h1 style="padding-top: 10px;">My Interest</h1> -->
+        
+
+<!--------------------This is the Games Part in Interest------------------------->
+        <div id="Games" class="page" >
+            <h2 style="padding-top: 40px; padding-left: 30px; font-weight: bold;">Games</h2>
+            <div class="card2">
+            <div class="game-container">
+            <div class="game-box">
+            <h3 >Games I Play 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-controller" viewBox="0 0 16 16">
+                <path d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1z"/>
+                <path d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729q.211.136.373.297c.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466s.34 1.78.364 2.606c.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527s-2.496.723-3.224 1.527c-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.3 2.3 0 0 1 .433-.335l-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a14 14 0 0 0-.748 2.295 12.4 12.4 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.4 12.4 0 0 0-.339-2.406 14 14 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27s-2.063.091-2.913.27"/>
+                </svg>
+            </h3>
+            <p>"I enjoy playing games especially team games and multiplayer games. While since MCO, my secondary school friends and I have spent countless days and nights gaming together."</p>
+                <div class="big-border">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxhjYniqXU_9z5dMfSIK0eh-yn8A-qeE9Nmw&s" alt="VALORANT">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkwJGS48V19xAD0Qu0Q24S0oHgvtYcgdBr2g&s" alt="PUBG" >
+                    <img src="https://play-lh.googleusercontent.com/hEm5NVeEv7UfFJaK8GZdfWe7p3DB_VvYx57qIEHbR0tMV_NToziH0Vbgd6CxLiWF-iURpAe-jsC_UGUDt0diPQ" alt="HOK" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHdBNAxJmW0rioVC-R4CgN07C7f9MrGMgISA&s" alt="MLBB" >
+                    <img src="https://play-lh.googleusercontent.com/Qf2SJGpLxd9eu4CLWRrh2tfmmkncg7TQ2RNr44tWO07EBfhfMs4CHlizioym11Vb6RmfIWCNz6FNsOgHj_5dMA" alt="PokemonGO" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRAi5Ijp1qmXxz8lT3V2JcauhXFkXIiT6x5w&s" alt="Pokemon PTCG" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ACYlFaBOvIDZQYmvqpV3WVHDKukzKiU5tA&s" alt="Clash Royale" >
+                    <img src="https://dul9f6a0vf8qf.cloudfront.net/DLC/8df58c23bf37a860204a8afd6a3b77482ff94951aaf8ce2cd31778f080bd2009/512x512.webp" alt="Cooking Fever" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw_pPM8J6Tau4VgBjpYbqhl1vfd-ByewNlMA&s" alt="Aeroplane Chef" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmLObGiAAgCMDxSvt9Zr8IlUYvyI9Kwwdrjg&s" alt="Subway Surf"   >
+                    <img src="https://game.gtimg.cn/images/gp/public/logo_min.jpg" alt="和平" >
+                    <img src="https://lh6.googleusercontent.com/proxy/DRbeFbrTjazNxlFu3i0_7DQYuR4kbBDnRnxzYiv5eyGkC28tYFI598GAeLSzmBGO2L19kpabE5mPKD9_i8f250Q8CgOsYUsn6OOSchPMlabpxclnTo3mTk9C77NhyShc" alt="王者" >
+                    <img src="https://play-lh.googleusercontent.com/VY_UVnobxR2O2ozc_-Qs2rJFqn4jMBv-nciJA-faEwVgXDBvxx0jztHMivQcctzRUR-C14JCc7xjLyO2H-aH9g=w240-h480-rw" alt="Hungry Shark" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2PPlC0u6Fp_bCv7QeJ-ercwiLyj3vG5zkZA&s" alt="Terraria" >
+                    <img src="https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=314,height=314,fit=cover,f=auto/76fc1b000203faf71b77a75b10022142/crossy-road.png" alt="Crossy Road" >
+                    <img src="https://play-lh.googleusercontent.com/0QjSziu11LyO3YNecvC2VjrzWblqH3GAFFNnjkYscUZ7SzhaW7Nx2lfqJk50iVaLIgI" alt="Alphard 8" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1F1lqs47tBAiQJsBR_DScftpJpxtceYXGxw&s" alt="Alphard 9" >
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjIyOTg3ODc2NF5BMl5BanBnXkFtZTcwNzAxMjE0OQ@@._V1_FMjpg_UX1000_.jpg" alt="Slugtera" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj_VsA7Ris1i_82u1_C8qmfPrnFMae-EPYXQ&s" alt="Geometry Dash" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ287Cl6qzBCQHPWhRvmPTjR8Cy-4xx6f95Q&s" alt="Dump Ways to Die" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK96BLhZrKdwRq0O9itZjy_hIVHchKytefdA&s" alt="Shadow Fight" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1KLjWs1zUDr5mWh_zq9iV_Bj4Q76frBQUgg&s" alt="Piano Tiles 1" >
+                    <img src="https://static.vecteezy.com/system/resources/previews/027/127/558/non_2x/brawl-stars-logo-brawl-stars-icon-transparent-free-png.png" alt="Brawl Stars" >
+                    <img src="https://pageflows.com/media/logos/candycrush.jpg" alt="Candy Crush" >
+                    <img src="https://play-lh.googleusercontent.com/GTd1rUAswLuzMP1i4DlWX5z88McGJEklF-Dap0eCPleKO77rrdrKeJVEWnwQe18sGxyw1NKHQnLUcc4ba1W7uC8=w240-h480-rw" alt="Dragon City" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx7rBe8ht8qukhwoK_0ebWxxkTFC4DmwzfRg&s" alt="Plant vs zombie" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZCqPRu4issDUmx5TE-ywoHma412emAjspzQ&s" alt="Temple run" >
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Roblox_%282025%29_%28App_Icon%29.svg/1280px-Roblox_%282025%29_%28App_Icon%29.svg.png" alt="Roblox" > 
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkNK2NIBSEl7xuwFbOr0-FL5HnKijDPQmq1Q&s" alt="Jetpack Joyride" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3gIDS7pJTjE1v9B43fBT7_yvokILg-IP-PQ&s" alt="Hill Climb " >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM0jzm3y1P41X9kgwVgu9y1snlrEHEVZpXoA&s" alt="Pou" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqHvXxlPMraGU-mwMmTi0iQwe9IMN43ao55A&s" alt="GTA" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV66NWtglJcleFqPdWlQ1hA9fCm2ggO9P6tg&s" alt="Apex" >
+                    <img src="https://cdn2.steamgriddb.com/icon_thumb/ac4e7a4f341e7281b0f6f274f9ec3905.png" alt="Genshin" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCoCM_lU6BrrmrQ0i2TZpvyci2OK7qW-cjRA&s" alt="Overcook" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSumDUWGaAH_aIJBm1aFrjy1EAAYx7SOgMJSQ&s" alt="Minecraft" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgU10FBe9sjNS2PaYqZoK3XwmlNaKbxnwFxA&s" alt="Fortnite" >
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZT7iO-bpttlOm3lvr_kc8crr3ZGjSeGurMw&s" alt="The sims4 " >
+                    <img src="https://static.wikia.nocookie.net/bronzebeards-tavern/images/1/1b/Bronzebeard%27s_Tavern.jpg/revision/latest/smart/width/250/height/250?cb=20250310114459" alt="BronzeBread Tavern">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1kM9Cqwy-S57z9U-RuLYJx0wT5f9D9ihDcw&s" alt="CSGo" >
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+<!--------------------This is the Games Part in Interest------------------------->
+
+
+
+<!--------------------This is the Sport Part in Interest------------------------->
+        <div id="Sports" class="page">
+            <h2 style="padding-top: 40px; padding-left: 30px; font-weight: bold;">Sports</h2>
+            <div class="interest-container" >
+                <div class="game-box">
+                    <h3>Sports I Play
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trophy-fill" viewBox="0 0 16 16">
+                        <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935"/>
+                        </svg>
+                    </h3>
+                    <p>"I really enjoy sports, especially team sports bacause of the feeling and archievment I get it from my friends no matter win or lose."</p>
+                </div>
+
+                <ul class="gallery" style="padding-right: 70px;">
+                <li>
+                    <img src="./Assets/sport/Badminton.jpg" alt="Badminton">
+                    <div class="content">
+                        <span><h2>Badminton</h2></span>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="./Assets/sport/Basketball.jpg" alt="Basketball">
+                    <div class="content">
+                        <span><h2>Basketball</h2></span>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="./Assets/sport/Volleyball.jpg" alt="Volleyball">
+                    <div class="content">
+                        <span><h2>Volleyball</h2></span>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="./Assets/sport/Captain Ball.jpg" alt="Captain Ball">
+                    <div class="content">
+                        <span><h2>Captain Ball</h2></span>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="./Assets/sport/Skatboard.jpg" alt="Skateboard">
+                    <div class="content">
+                        <span><h2>Skateboard</h2></span>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="./Assets/sport/Cycling.jpg" alt="Cycling">
+                    <div class="content">
+                        <span><h2>Cycling</h2></span>
+                    </div>
+                </li>
+                </ul>
+
+            </div>
+        </div>
+<!--------------------This is the Sport Part in Interest------------------------->
+
+<!------------------This is the Instrument Part in Interest---------------------->
+        <div id="Instruments" class="page" style="padding-bottom: 45px;">
+        <h2 style="padding-top: 40px; padding-bottom: 0; padding-left: 30px; font-weight: bold;" >Instruments</h2>
+        <div class="instrument-container">
+            <div class="game-box" >
+                <h3>Instruments I Play
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13s1.12-2 2.5-2 2.5.896 2.5 2m9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2"/>
+                <path fill-rule="evenodd" d="M14 11V2h1v9zM6 3v10H5V3z"/>
+                <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4z"/>
+                </svg>
+                </h3>
+                <p>"I enjoy to try and learn different kinds of instrument by myself. I’ve learned several of them on my own without ever attending a class."</p>
+            </div>
+
+            <div class="slider-card">
+            
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+                <input type="radio" name="slider" id="slide3">
+                <input type="radio" name="slider" id="slide4">
+                <input type="radio" name="slider" id="slide5">
+
+                <div class="slider">
+                    <div class="slides-track">
+                    
+                        <div class="slide s1">
+                            <img src="./Assets/Instrument/Acoustic Guitar.jpg" alt="" style="object-fit: cover; object-position: center 85%;">
+                            <div class="slide-text"><h3>Acoustic Guitar</h3></div>
+                            <div class="nav"><label for="slide2">Next</label></div>
+                        </div>
+                        
+                        <div class="slide s2">
+                            <img src="./Assets/Instrument/Classical Guitar.jpg" alt="" style="object-fit: cover; object-position: center 90%;">
+                            <div class="slide-text"><h3>Classical Guitar</h3></div>
+                            <div class="nav">
+                                <label for="slide1">Prev</label>
+                                <label for="slide3">Next</label>
+                            </div>
+                        </div>
+                        
+                        <div class="slide s3">
+                            <img src="./Assets/Instrument/ukelele.jpg" alt="" style="object-fit: cover; object-position: center 90%;">
+                            <div class="slide-text"><h3>Ukelele</h3></div>
+                            <div class="nav">
+                                <label for="slide2">Prev</label>
+                                <label for="slide4">Next</label>
+                            </div>
+                        </div>
+                        
+                        <div class="slide s4">
+                            <img src="./Assets/Instrument/kalimba.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="slide-text"><h3>Kalimba</h3></div>
+                            <div class="nav">
+                                <label for="slide3">Prev</label>
+                                <label for="slide5">Next</label>
+                            </div>
+                        </div>
+                        
+                        <div class="slide s5">
+                            <img src="./Assets/Instrument/Popu Piano.jpg" alt="" style="object-fit: cover; object-position: center 90%;">
+                            <div class="slide-text"><h3>Popu Piano</h3></div>
+                            <div class="nav">
+                                <label for="slide4">Prev</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+<!------------------This is the Instrument Part in Interest---------------------->
+<!-- Third Page -->
+
+<!-- Fourth Page Command and ContactMe -->
+    <div id="Contact">
+    <div class="contact" style="display: flex; flex-direction: row; gap: 20px; padding-top: 10px;">
+        <div class="command" style="padding-bottom: 150px;">
+            <h2 style="padding-left: 280px; padding-bottom: 10px;" class="pt-sans-narrow-bold" >" Get In Touch "</h2>
+            <label for="name" style="font-weight: bold;">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" style="text-align: center;">
+            <label for="name"style="font-weight: bold;">Email:</label>
+            <input type="text" name="email" id="email" placeholder="Enter Your Email" style="text-align: center;">
+            <br>
+            <label for="name" style="padding-top: 20px; padding-bottom: 10px; font-weight: bold;" >Message:</label>
+            <div class="message">
+            <textarea placeholder="Thing to say..." style="width: 590px; height: 215px;"></textarea>
+            </div>
+            <div class="button" style="padding-left: 320px; padding-top: 10px;">
+                <button type="submit" class="btn btn-secondary" style="font-weight: bold;">Submit</button>
+            </div>
+        </div>
+    
+
+        <div class="contactme" style="padding-top: 200px; gap: 10px ;">
+            <div class="box">
+                <div class="whatsapp" style="font-size: 14px;">
+                <!-- <img src="./Project/Assets/Contact/Whatsapp.jpg" alt="Whatsapp"> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                </svg>
+                <br>
+                <a href="https://wa.me/qr/K3OIK5EWBKFFM1" style="color: white;">+6012-677 9638</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="wechat">
+                <!-- <img src="./Project/Assets/Contact/Wechat.jpg" alt="wechat"> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-wechat" viewBox="0 0 16 16">
+                <path d="M11.176 14.429c-2.665 0-4.826-1.8-4.826-4.018 0-2.22 2.159-4.02 4.824-4.02S16 8.191 16 10.411c0 1.21-.65 2.301-1.666 3.036a.32.32 0 0 0-.12.366l.218.81a.6.6 0 0 1 .029.117.166.166 0 0 1-.162.162.2.2 0 0 1-.092-.03l-1.057-.61a.5.5 0 0 0-.256-.074.5.5 0 0 0-.142.021 5.7 5.7 0 0 1-1.576.22M9.064 9.542a.647.647 0 1 0 .557-1 .645.645 0 0 0-.646.647.6.6 0 0 0 .09.353Zm3.232.001a.646.646 0 1 0 .546-1 .645.645 0 0 0-.644.644.63.63 0 0 0 .098.356"/>
+                <path d="M0 6.826c0 1.455.781 2.765 2.001 3.656a.385.385 0 0 1 .143.439l-.161.6-.1.373a.5.5 0 0 0-.032.14.19.19 0 0 0 .193.193q.06 0 .111-.029l1.268-.733a.6.6 0 0 1 .308-.088q.088 0 .171.025a6.8 6.8 0 0 0 1.625.26 4.5 4.5 0 0 1-.177-1.251c0-2.936 2.785-5.02 5.824-5.02l.15.002C10.587 3.429 8.392 2 5.796 2 2.596 2 0 4.16 0 6.826m4.632-1.555a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0m3.875 0a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0"/>
+                </svg>              
+                <br>
+                <a href="http://weixin.qq.com/r/jeslyn_0624" style="color: white;">jeslyn_0624</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="instagram ">
+                <!-- <img src="./Project/Assets/Contact/Instagram.jpg" alt="instagram"> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                </svg>
+                <br>
+                <a href="https://www.instagram.com/jeslyn.lee08?utm_source=qr&igsh=MWR4cHdzeXZzamdpMg==" style="color: white;">jeslyn.lee08</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+<!-- Fourth Page Command and ContactMe -->
+<!-- Floating Button -->
+    <a href="#Home" class="floating-button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+    </svg>
+    </a> 
+<!-- Floating Button -->
+
+    </div> <!--Interest (Third Page) -->
+    </div> <!--Page 1-->
+    </div> <!--Page 1-->
+    </div> <!--Hero-->
+</body>
+</html>

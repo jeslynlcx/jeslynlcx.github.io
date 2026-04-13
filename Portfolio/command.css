@@ -1,0 +1,30 @@
+.command label{
+    padding-left: 70px;
+    padding-right: 20px;
+}
+.command{
+    padding-top: 160px;
+}
+.message{
+    padding-left: 70px;
+}
+input{
+    border-radius: 20px;
+}
+textarea{
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-left: 20px;
+    border: 2px solid rgb(0, 0, 0);
+}
+.btn-secondary{
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.btn-secondary:hover{
+    background-color: rgb(17, 61, 78) !important;
+    border: 2px solid rgb(255, 255, 255);
+}
+        
