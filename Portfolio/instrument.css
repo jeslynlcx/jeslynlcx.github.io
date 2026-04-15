@@ -3,11 +3,12 @@
     height: 250px; 
     width: 450px; 
     padding-top: 0;
+    padding-left: 10px;
     display: flex;
     align-items: center;
     transition: width 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 } 
-.instrument-container:hover{
+.instrument-container:hover{  
     width: 950px; 
 } 
 .slider-card{
@@ -25,7 +26,7 @@
     transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
     box-shadow: 0 10px 30px rgba(0, 170, 255, 0.15); 
 }
-.instrument-container:hover .slider-card{
+.instrument-container:hover .slider-card{ 
     left: 380px; 
     opacity: 1;
 }
@@ -107,4 +108,31 @@ input[type="radio"]{
     margin: 0;
     font-size: 22px;
     text-shadow: 2px 2px 5px black;
+}
+@media (max-width: 992px){
+.instrument-container {
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: column;
+}
+
+.instrument-container:hover{
+    width: 100% !important; 
+}
+
+.slider-card{
+    position: relative !important; 
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+    width: 95% !important;
+    height: 300px !important;
+    margin-top: 20px;
+    opacity: 0;
+    display: none;
+}
+.instrument-container:hover .slider-card{
+    display: block;
+    opacity: 1;
+}
 }

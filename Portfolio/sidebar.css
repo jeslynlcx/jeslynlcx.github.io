@@ -69,3 +69,21 @@ hr{
     color: #7ad3ff !important;
     font-size: 1.1rem !important;
 }
+@media (max-width: 992px){
+.sidebar {
+    display: none; 
+    width: 100%;
+    position: fixed;
+    top: 60px;
+}
+#nav-toggle:checked ~ .sidebar{
+    display: flex;
+}
+.nav-toggle-btn{
+    display: block;
+    padding: 10px;
+    background: black;
+    color: white;
+    text-align: center;
+}
+}

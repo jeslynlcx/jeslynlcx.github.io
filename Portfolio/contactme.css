@@ -24,3 +24,13 @@ body{
     text-align: center;
     padding: 5px;
 }
+@media (max-width: 992px){
+.contactme{
+    order: 2;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    width: 100% !important;
+    margin-top: 20px !important;
+}
+}

@@ -27,4 +27,20 @@ textarea{
     background-color: rgb(17, 61, 78) !important;
     border: 2px solid rgb(255, 255, 255);
 }
-        
+
+@media (max-width: 992px){
+.content-wrapper{
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: center;
+}
+
+.command{
+    order: 1; 
+    width: 100% !important;
+    padding-top: 20px !important;
+}
+.message{
+    padding-left: 0;
+}
+}
